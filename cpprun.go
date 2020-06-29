@@ -50,7 +50,7 @@ func main() {
 	cmd.Start()
 
 	scanner := bufio.NewScanner(stdout)
-	scanner.Split(bufio.ScanWords)
+	scanner.Split(bufio.ScanLines)
 	for scanner.Scan() {
 		m := scanner.Text()
 		fmt.Println(m)
